@@ -1,0 +1,152 @@
+@import 'global';
+@import 'colors';
+
+.logo{
+    width: 100px;
+    height: 90px;
+}
+
+header{
+    position: fixed;
+    background-color: $white;
+    top: 0;
+    // border-top: 30px solid $grey;
+    width: 100%;
+}
+
+.wrapper{
+    background-color: $white;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.presentacion{
+    padding-top: 200px;
+    padding-bottom: 50px;
+}
+
+nav{
+    @include caja-flex(space-between, center,nowrap);
+
+    ul{
+        display: flex ;
+        padding: 0;
+
+        a{
+           padding: 10px; 
+           font-size: 1.6rem;
+           font-weight: bold;
+        }
+        a:hover{
+            color: $lightblue;
+            transform: scale(1.1);
+        }
+    }
+}
+
+.hero{
+    background-color: $light;
+
+    &_container{
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        justify-items: center;
+        margin: 0 auto;
+        height: 90vh;
+        z-index: 1;
+        width: 100%;
+        max-width: 1200px;
+        padding-right: 24px;
+        padding-left: 24px;
+    }
+}
+
+.presentacion{
+    padding-top: 200px;
+    padding-bottom: 50px;
+    @include caja-flex (space-between, center, nowrap);
+
+    .flex-item2{
+       text-align: center; 
+    }
+
+    h1{
+        margin-top: 0;
+        padding-right: 20px;
+        font-size: $font-h1;
+    }
+
+    p{
+        padding-right: 20px;
+        padding-bottom: 10px;
+    }
+}
+
+form {
+    label{
+        display: inline-block;
+        margin-bottom: 6px;
+        color: $lightblue;
+    }
+    .form-group{
+        margin-bottom: 16px;
+    }
+
+    .form-control{
+        width: 100%;
+        padding: 7px 12px;
+        font-size: 1rem;
+        border: slateblue;
+        border-radius: 20px;
+    } 
+} 
+
+#contact {
+    padding: 5rem;
+    h2,
+    p.large {
+        text-align: center;
+        width: 60%;
+        margin: 0 auto;
+    }
+    form{
+        padding-top: 80px;
+        padding-bottom: 20px;
+        width: 50%;
+        margin: 0 auto;
+        button {
+          width: 100%;  
+        }
+    }
+
+}
+
+
+
+.servicios{
+    div{
+        text-align: center;
+    }
+    .tipo-servicios{
+        @include caja-flex (center,center,nowrap);
+        i{
+            font-size: 30px;
+            color: $lightblue;
+        }
+
+    }
+}
+
+
+footer{
+    min-height: 80px;
+    background-color: $grey;
+    margin-top: 0;
+
+    .footer-content{
+        text-align: center;
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+}

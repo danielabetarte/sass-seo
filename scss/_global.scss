@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;1,400&display=swap');
+
+$font-p: 1.8rem;
+$font-h1: 3.0rem;
+$font-h2: 2.4rem;
+$font-h3: 2.0rem;
+
+//Globales
+
+html{
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+*,*::before, *::after{
+    box-sizing: inherit;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    // background: url(../imagenes/imagen1.webp);
+}
+
+ul{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(134,132,132);
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+
+nav, .servicios, .presentacion, .footer-content{
+    width: 80%;
+    margin: auto;
+}
+
+.titulo-servicios, .presentacion{
+    margin-bottom: 10%;
+}
+
+
+p{
+    font-size: $font-p;
+    color: rgb(134,132,132);
+}
+
+h2{
+    font-size: $font-h2;
+}
+
+h3{
+    font-size: $font-h3;
+}
+
+.btn{
+    border: none;
+    border-radius: 2px;
+    padding: 0.7em 1.5em;
+    cursor: pointer ;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.btn-principal{
+    @extend .btn;
+    color: white;
+    background-color: #6495ED;
+}
+
+.btn-secundario{
+    @extend .btn;
+    background-color: rgb(134,132,132);
+}
+
+.containers {
+    padding: 5rem;
+    height: 80%;
+    // margin: auto;
+    max-width: 1300px;
+    overflow: auto;
+    background-color: #c7f1fb;
+}
+//MIXINS
+
+@mixin caja-flex ($principal, $cruzado, $wrap){
+    display: flex;
+    justify-content: $principal;
+    align-items: $cruzado;
+    flex-wrap: $wrap;
+}
+
